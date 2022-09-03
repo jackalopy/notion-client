@@ -1,23 +1,21 @@
-import { Client } from "@notionhq/client";
-import dotenv from "dotenv";
+import { Client } from "@notionhq/client"
+import dotenv from "dotenv"
+import { Tasks } from "./tasks"
 
-dotenv.config();
+dotenv.config()
 
-async function main() {
-  const notion = new Client({
+async function connect() {
+  return new Client({
     auth: process.env.NOTION_TOKEN,
-  });
-
-  const response = await notion.databases.query({
-    database_id: "FIXME",
-  });
-
-  console.log("Got response:", response);
+  })
 }
 
-main()
-  .then(() => process.exit(0))
+connect()
+  .then((notion) => {
+    const tasks = new Tasks(notion)
+    tasks.start()
+  })
   .catch((err) => {
-    console.error(err);
-    process.exit(1);
-  });
+    console.error(err)
+    process.exit(1)
+  })
