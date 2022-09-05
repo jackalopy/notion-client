@@ -37,8 +37,18 @@ export class Tasks {
   }
   
   private _dateFormatter(date: Date | string): string {
-    if (date instanceof Date) date = date.toISOString()
-    return date.split('T')[0]
+    if (typeof date === 'string') date = new Date(date)
+    
+    date = date.toLocaleString(process.env.DATE_FORMAT, {
+      timeZone: process.env.TIMEZONE,
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric'
+    })
+
+    const [day, month, year] = date.split('/')
+    date = `${year}-${month}-${day}`
+    return date
   }
 
   start () {
