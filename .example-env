@@ -1,0 +1,4 @@
+NOTION_TOKEN = "your notion unique id"
+NOTION_TASK_DB = "your db task id"
+DATE_FORMAT = "pt-BR"
+TIMEZONE = "America/New_York"
