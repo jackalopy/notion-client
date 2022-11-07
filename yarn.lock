@@ -27,10 +27,10 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@notionhq/client@^2.0.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@notionhq/client/-/client-2.2.0.tgz#2255d9547f4d84aeadd3cb2ce49f3145e3c93d52"
-  integrity sha512-wJwGajJjdy3GDI5HpomulhYuxo5j8t1Conm9HkpHqkHnj4qrc+6N//qRXrogsUU2sn60kSHpRcPB4P6L0799tg==
+"@notionhq/client@^2.2.2":
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/@notionhq/client/-/client-2.2.2.tgz#621eab5788fd1aca67d53454871bbf4122e651ba"
+  integrity sha512-L7TB+UyhnWTSv1ek7xzGr9+mS9o76qMKnZ8Ag8H2q6QgvywAiPOFcE3ulWI/1AnMewGVRqwb30agPHMVRY/K/w==
   dependencies:
     "@types/node-fetch" "^2.5.10"
     node-fetch "^2.6.1"
